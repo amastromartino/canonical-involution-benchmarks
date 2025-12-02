@@ -3,14 +3,16 @@ import sympy as sp
 
 def compute_discrepancy(sys1, sys2):
     """
-    Computes symbolic discrepancy Δ = sys1 - sys2.
-    If Δ is identically zero, the system is holonomic/in involution.
+    Compara ambos sistemas clave por clave.
+    Si una clave falta, su valor se toma como 0.
     """
+    keys = set(sys1.keys()) | set(sys2.keys())
+    delta = {}
 
-    discrepancy = {}
+    for k in keys:
+        v1 = sys1.get(k, 0)
+        v2 = sys2.get(k, 0)
+        delta[k] = float(sp.simplify(v1 - v2))
 
-    for key in sys1:
-        if key in sys2:
-            discrepancy[key] = sp.simplify(sys1[key] - sys2[key])
+    return delta
 
-    return discrepancy
