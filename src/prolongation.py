@@ -4,16 +4,22 @@ import sympy as sp
 def prolong(system, order=1):
     """
     Basic symbolic prolongation operator.
-    Given a first-order system {u_x, u_y}, this adds second-order mixed derivatives.
-    This is a simplified version consistent with the article's examples.
+    If the system is numeric (floats), prolongation is skipped.
     """
-
     new_sys = {}
 
     for key, expr in system.items():
         new_sys[key] = expr
 
-        # Extract variable from key name u_x, u_y
+    # Detectar si el sistema es simbólico
+    symbolic_mode = any(hasattr(expr, "diff") for expr in system.values())
+
+    if not symbolic_mode:
+        # No intentar prolongar sistemas numéricos
+        return new_sys
+
+    # ---- Prolongación solo para sistemas simbólicos ----
+    for key, expr in system.items():
         if "_" not in key:
             continue
 
