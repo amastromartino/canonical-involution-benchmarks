@@ -15,3 +15,21 @@ El código está organizado de manera modular para permitir ampliaciones posteri
 
 ## 📁 Estructura del repositorio
 
+canonical-involution-benchmarks/
+│
+├── src/
+│ ├── main.py # Script principal del pipeline
+│ ├── prolongation.py # Prolongación de un sistema (orden 1 por defecto)
+│ ├── involution.py # Implementación simplificada de la involución canónica
+│ └── discrepancy.py # Métrica de discrepancia entre sistemas
+│
+├── examples/ # (Opcional) Ejemplos numéricos y simbólicos
+│
+├── notebooks/ # Notebooks demostrativos
+│
+├── benchmarks/ # Scripts de prueba y tiempos
+│
+├── figures/ # Ilustraciones (si se requieren)
+│
+├── LICENSE # Licencia MIT
+└── README.md # Este archivo
