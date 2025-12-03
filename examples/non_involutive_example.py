@@ -1,7 +1,8 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from core import check_involution_condition
+from main import check_involution_condition
+
 import sympy as sp
 
 # Ejemplo NO involutivo: y' = x^2, u = y'(x)^2
@@ -18,3 +19,4 @@ system = {
 print("Checking non-involutive example...")
 result = check_involution_condition(system, order_k=1)
 print(result)
+
