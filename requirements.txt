@@ -1,3 +1,6 @@
-sympy
-numpy
-matplotlib
+# requirements.txt
+# Dependencies for canonical-involution-benchmarks
+# 
+# Installation: pip install -r requirements.txt
+
+sympy>=1.12
