@@ -1,30 +1,32 @@
-# Canonical Involution Benchmarks
-
+Canonical Involution Benchmarks
 A Python package implementing the alpha-theta method for canonical involution verification with reproducible benchmark results.
 
-## Features
+Features
+Implementation of the alpha-theta method for efficient integrability verification
 
-- Implementation of the alpha-theta method for efficient integrability verification
-- Comparison with traditional Cartan-Kähler approach
-- Benchmark scripts to reproduce Table 2 from the paper
-- Example systems for testing (involutive and non-involutive)
-- Integration with SymPy for symbolic computation
+Comparison with traditional Cartan-Kähler approach
 
-## Quick Start
+Benchmark scripts to reproduce Table 2 from the paper
 
-1. **Clone the repository**
-```bash
+Example systems for testing (involutive and non-involutive)
+
+Integration with SymPy for symbolic computation
+
+Quick Start
+Clone the repository
 git clone https://github.com/amastromartino/canonical-involution-benchmarks.git
 cd canonical-involution-benchmarks
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
+Install dependencies
+pip install -r requirements.txt
+Run basic examples
 python examples/involutive_example.py
 python examples/non_involutive_example.py
-python examples/involutive_example.py
-python examples/non_involutive_example.py
+Reproduce benchmark results (Table 2 from paper)
 python benchmarks/generate_table2.py
+Benchmark Results
+To reproduce Table 2 from our paper:
 python benchmarks/generate_table2.py
+Output:
 ================================================================================
 BENCHMARK RESULTS - alpha-theta vs Cartan-Kähler Method
 ================================================================================
@@ -36,7 +38,7 @@ BENCHMARK RESULTS - alpha-theta vs Cartan-Kähler Method
 (3,2,3)         850      45000       52.9x        100%
 (4,3,3)        3200     280000       87.5x        100%
 ================================================================================
-
+Project Structure
 canonical-involution-benchmarks/
 ├── benchmarks/          # Benchmark scripts
 ├── examples/           # Example systems
@@ -63,3 +65,6 @@ result = check_involution_condition(system, x, y)
 print(f"Is involutive: {result['is_involutive']}")
 License
 MIT License
+
+
+
