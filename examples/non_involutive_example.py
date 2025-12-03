@@ -1,25 +1,20 @@
-# non_involutive_example.py
-import os, sys
-# Añadir automáticamente la ruta del proyecto (sube desde /src/examples/ a /src/)
+import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from main import check_involution_condition
+from core import check_involution_condition
 import sympy as sp
 
-# Ejemplo NO involutivo:
-# u_x = y'(x)
-# u   = y(x)^2
+# Ejemplo NO involutivo: y' = x^2, u = y'(x)^2
 
 x = sp.Symbol("x")
 y = sp.Function("y")(x)
 p = sp.diff(y, x)
 
-# Sistema no involutivo
 system = {
-    "u_x": p,       # y'
-    "u": y**2       # y^2
+    "u_x": p,           # ecuación para y'
+    "u": p**2 + x       # ecuación incompatible → NO involutiva
 }
 
-print("Checking involution of NON-INVOLUTIVE system: u_x = y', u = y^2")
+print("Checking non-involutive example...")
 result = check_involution_condition(system, order_k=1)
 print(result)
