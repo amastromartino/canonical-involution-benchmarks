@@ -1,4 +1,5 @@
-from core import check_involution_condition
+from main import check_involution_condition
+
 import sympy as sp
 
 if __name__ == "__main__":
