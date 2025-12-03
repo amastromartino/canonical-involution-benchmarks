@@ -13,6 +13,6 @@ A Python package implementing the alpha-theta method for canonical involution ve
 ## Quick Start
 
 1. **Clone the repository**
-  ```bash
+```bash
 git clone https://github.com/amastromartino/canonical-involution-benchmarks.git
 cd canonical-involution-benchmarks
