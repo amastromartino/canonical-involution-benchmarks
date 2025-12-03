@@ -1,7 +1,8 @@
 import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
-from core import check_involution_condition
+from main import check_involution_condition
+
 import sympy as sp
 
 # Ejemplo involutivo: (y')^2 + y^2 - 1 = 0
@@ -18,3 +19,4 @@ system = {
 print("Checking involution of: (y')^2 + y^2 - 1 = 0")
 result = check_involution_condition(system, order_k=1)
 print(result)
+
