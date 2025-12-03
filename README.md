@@ -1,10 +1,10 @@
 # Canonical Involution Benchmarks
 
-A Python package implementing the α_θ^(k) method for canonical involution verification with reproducible benchmark results.
+A Python package implementing the alpha-theta method for canonical involution verification with reproducible benchmark results.
 
 ## Features
 
-- Implementation of the α_θ^(k) method for efficient integrability verification
+- Implementation of the alpha-theta method for efficient integrability verification
 - Comparison with traditional Cartan-Kähler approach
 - Benchmark scripts to reproduce Table 2 from the paper
 - Example systems for testing (involutive and non-involutive)
