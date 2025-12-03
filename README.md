@@ -4,6 +4,8 @@
 
 A Python package implementing the α_θ^(k) method for canonical involution verification with reproducible benchmark results.
 
+---
+
 ## 📋 Features
 
 - Implementation of the α_θ^(k) method for efficient integrability verification
@@ -11,6 +13,8 @@ A Python package implementing the α_θ^(k) method for canonical involution veri
 - Benchmark scripts to reproduce Table 2 from the paper
 - Example systems for testing (involutive and non-involutive)
 - Integration with SymPy for symbolic computation
+
+---
 
 ## 🚀 Quick Start
 
