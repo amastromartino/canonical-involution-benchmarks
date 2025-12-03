@@ -1,0 +1,16 @@
+from src.main import check_involution_condition
+import sympy as sp
+
+# Define a system
+x = sp.Symbol("x")
+y = sp.Function("y")(x)
+p = sp.diff(y, x)
+
+system = {
+    "eq1": sp.Eq(p, x**2),
+    "eq2": sp.Eq(sp.Symbol('u'), p**2)
+}
+
+# Check involution
+result = check_involution_condition(system, x, y)
+print(f"Is involutive: {result['is_involutive']}")
